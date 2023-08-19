@@ -34,7 +34,11 @@ export default function Page() {
     try {
       setLoading(true);
       const response = await axios.post('/api/sign-in', values);
-      router.push('/');
+      // router.push('/', {})
+      // router.refresh('/')
+      router.replace('/')
+      // window.location.reload()
+      // router.reload(window.location.pathname)
       toast.success(response.data.message)
     } catch (error: any) {
       console.log("Sign-up error", error);

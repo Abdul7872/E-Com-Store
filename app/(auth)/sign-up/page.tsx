@@ -14,7 +14,7 @@ import { useRouter } from "next/navigation";
 
 
 const formSchema = z.object({
-  name: z.string().min(3, { message: "Password must contain at least 3 character(s)"}),
+  name: z.string().min(3, { message: "Name must contain at least 3 character(s)"}),
   email: z.string().min(1, { message: "This field has to be filled." }).email("This is not a valid email."),
   password: z.string().min(4, { message: "Password must contain at least 4 character(s)"}),
   confirmPassword: z.string().min(4, { message: "Password must contain at least 4 character(s)"}),

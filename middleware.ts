@@ -35,6 +35,6 @@ function verifyJwtToken(token: string): Boolean {
 export const config = {
   // matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
   // matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)',],
-  matcher: ['/cart',],
+  matcher: ['/cart', '/sign-in','/sign-up'],
 
 };
