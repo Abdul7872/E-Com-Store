@@ -11,9 +11,9 @@ import { redirect } from "next/navigation";
 const Navbar = async () => {
   const categories = await getCategories();
   const { userId, userName, userEmail } = getDataFromToken();
-  if (!userId) {
-    redirect('/sign-in');
-  }
+  // if (!userId) {
+  //   redirect('/sign-in');
+  // }
 
   return ( 
     <div className="border-b">
@@ -25,7 +25,7 @@ const Navbar = async () => {
           <MainNav data={categories} />
           <div className="ml-auto flex items-center gap-x-4">
             <NavbarActions />
-            <UserNav {...{ userName, userEmail }} />
+            {userId && <UserNav {...{ userName, userEmail }} />}
           </div>
         </div>
       </Container>
